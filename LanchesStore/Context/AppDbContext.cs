@@ -1,4 +1,10 @@
-﻿using LanchesStore.Models;
+﻿#region Manutenções/Implementações
+/*
+ 31/05/2024 - Implementado nova tabela de carrinho de compras e atualização do banco de dados
+ */
+#endregion
+
+using LanchesStore.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace LanchesStore.Context;
@@ -11,4 +17,5 @@ public class AppDbContext : DbContext
     //Define quais classes quero mapear para cada tabela
     public DbSet<Categoria> Categorias { get; set; }
     public DbSet<Lanche> Lanches { get; set; }
+    public DbSet<CarrinhoCompraItem> CarrinhoCompraItens { get; set; }
 }
