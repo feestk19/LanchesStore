@@ -1,0 +1,13 @@
+﻿//ViewData -> Usado para transferir pequenos dados para a View
+            ViewData["Titulo"] = "Todos os lanches";
+            ViewData["Data"] = DateTime.Now;
+
+            var lanches = _lancheRepository.Lanches;
+            var totalLanches = lanches.Count();
+
+            //ViewBag -> objetos dinamicos (Não exigem conversão de dados)
+            ViewBag.Total = "Total de lanches : ";
+            ViewBag.TotalLanches = totalLanches;
+
+            //TempData -> Objetos que recuperam dados temporariamente (Só pode ser usado uma vez)
+            TempData["SObrenome"] = "Strombeck";
