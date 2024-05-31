@@ -1,3 +1,8 @@
+#region Manutenções/Implementações
+/*
+ * 31/05/2024 - Implementação inicial
+ */
+#endregion
 using LanchesStore.Context;
 using LanchesStore.Repositories;
 using LanchesStore.Repositories.Interfaces;
@@ -17,6 +22,13 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<ILancheRepository, LancheRepository>();
 builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
 
+/*AddSingleton -> O novo objeto do serviço permanece em todo tempo de vida da aplicação, e só é necessário declarar 1 vez*/
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+//Adiciona os Middlewares rersponsáveis para utilização de Sessions no navegador
+builder.Services.AddMemoryCache();
+builder.Services.AddSession();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -31,6 +43,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 

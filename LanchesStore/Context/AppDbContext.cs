@@ -1,6 +1,6 @@
 ﻿#region Manutenções/Implementações
 /*
- 31/05/2024 - Implementado nova tabela de carrinho de compras e atualização do banco de dados
+ * 31/05/2024 - Implementação inicial
  */
 #endregion
 

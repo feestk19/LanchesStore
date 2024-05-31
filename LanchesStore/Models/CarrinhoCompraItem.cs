@@ -1,4 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿#region Manutenções/Implementações
+/*
+ * 31/05/2024 - Implementação inicial
+ */
+#endregion
+
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LanchesStore.Models

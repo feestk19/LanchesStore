@@ -1,4 +1,10 @@
-﻿using LanchesStore.Models;
+﻿#region Manutenções/Implementações
+/*
+ * 31/05/2024 - Implementação inicial
+ */
+#endregion
+
+using LanchesStore.Models;
 
 namespace LanchesStore.Repositories.Interfaces
 {
